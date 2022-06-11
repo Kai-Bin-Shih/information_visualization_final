@@ -43,7 +43,11 @@
     </div>
 
     <div class="main" >
-
+        <label for="beginDate">開始日期：</label>
+        <input type="date" id="beginDate" value="1990-01-01" min="1990-01-01" max="2021-12-31"><br>
+        <label for="endDate">結束日期：</label>
+        <input type="date" id="endDate" value="2021-12-31" min="1990-01-01" max="2021-12-31"><br>
+        <button onclick="updateAll()" class="btn">送出</button>
     </div>  
 </body>
 <script src="index.js" type="text/javascript" charset="utf-8"></script>
