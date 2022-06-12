@@ -122,6 +122,9 @@ function updateAll(date) {
                     .on("mouseover", function(event, d) {
                         d3.selectAll(".mapPoint").style("opacity", 0)
                         d3.select(this).style("opacity", 1)
+                        .attr("r", function(d) {
+                            return d.MagnitudeValue*2
+                        })
                         /* const [x, y] = d3.pointer(event)
                         tooltip.html(d.MagnitudeValue)
                             .style("left",(x)+ "px")
@@ -131,7 +134,8 @@ function updateAll(date) {
                             .style('font-family','sans-serif'); */
                     })
                     .on('mouseout', function(){
-                        d3.selectAll("circle").style("opacity", 1)                    
+                        d3.selectAll("circle").style("opacity", 1)    
+                        .attr("r", 2)                
                     })
             
             var pointGroup = ["<=3", "3~4", "4~5", "5~6", ">6"]
