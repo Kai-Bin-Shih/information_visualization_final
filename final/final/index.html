@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+
+    <style>
+        #canvas {
+            border: 1px solid darkolivegreen;
+            border-radius: 5px;
+            overflow: auto;
+        }
+
+        #explaination {
+            overflow: auto;
+            margin-left: 100px;
+            margin-right: 100px;
+        }   
+
+        h1 {
+            text-align: center;
+        }
+        body {
+            background-color: #FDF5E6;
+        }
+
+        .main {
+            padding-top: 20px;
+            padding-left: 100px;
+            padding-right: 50px;
+        }
+
+    </style>
+<head>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <title>IV_group1</title>
+    <meta charset="UTF-8">
+</head>
+<body>
+    <div>
+        <h1>1990-2021地震統計</h1>
+    </div>
+
+    <div id="svg">
+        <div id="svg-container" style="float: left;"></div>
+        <div id="svg-container1" style="float: right;"></div>
+    </div>
+
+    <div class="main" >
+        <label for="beginDate">開始日期：</label>
+        <input type="date" id="beginDate" value="2021-01-01" min="1990-01-01" max="2021-12-31"><br>
+        <label for="endDate">結束日期：</label>
+        <input type="date" id="endDate" value="2021-12-31" min="1990-01-01" max="2021-12-31"><br>
+        <button onclick="updateAll(0)" class="btn">送出</button>
+        <button onclick="autoUpdate()" class="btn">播放</button>
+    </div>  
+    <div id="div-template"></div>
+</body>
+<script src="index.js" type="text/javascript" charset="utf-8"></script>
+
+
+</html>
