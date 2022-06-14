@@ -190,14 +190,6 @@ function updateAll(date) {
                     .attr("text-anchor", "left")
                     .style("alignment-baseline", "middle")
                     .style("font-size", "12px")
-            
-            layer2.append("text")
-                    .attr("x", 280)
-                    .attr("y", 440)
-                    .text("台灣地震地圖")
-                    .attr("text-anchor", "left")
-                    .style("alignment-baseline", "middle")
-                    .style("font-size", "14px")
                     
             //建立顏色漸變
             /* var maxValue = Math.max(...num)
